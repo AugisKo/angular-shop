@@ -10,7 +10,7 @@ export class AppComponent {
   public preke: Preke;
 
   public constructor() {
-    this.preke = new Preke('Kostiumas', 100, 'prod001.jpg', true);
+    this.preke = new Preke('Kostiumas', 100, 'prod001.jpg', false);
   }
   title = 'angular-shop';
 }

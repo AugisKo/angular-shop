@@ -1,5 +1,9 @@
 <div>
+  <img src="assets/img/lelija.jpg">
   <h1>{{preke.pavadinimas}}</h1>
+  <ng-container *ngIf="preke.nuolaida===true">
+    <img src="assets/img/Nuolaida.jpg">
+  </ng-container>
   <div>
     Kaina: {{preke.kaina}} EUR<br>
     Perkamas kiekis: {{preke.kiekis}}<br>
@@ -8,9 +12,10 @@
   <div><img src="assets/img/{{preke.image}}"></div>
   <div>
     <button (click)="preke.pridetiKieki()">
-      Pridėti 1 vnt.
+      Įdėti į krepšelį.
     </button>
-    <button (click)="preke.atimtiKieki()" [disabled]="preke.kiekis === 0">Atimti 1 vnt.
+    <button (click)="preke.atimtiKieki()" [disabled]="preke.kiekis === 0">Išimti iš krepšelio.
     </button>
+
     <div>
     </div>
